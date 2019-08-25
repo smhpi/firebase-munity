@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Footer extends Component {
   render() {
@@ -7,27 +8,27 @@ class Footer extends Component {
         <div className="site-footer">
           <div className="footerMenu">
             <h3>Computer Depot</h3>
-            <a href="#">About Us</a>
-            <a href="#">search</a>
+            <Link to="#">About Us</Link>
+            <Link to="#">search</Link>
           </div>
           <div className="footerMenu">
             <h3>Customer Portal</h3>
-            <a href="#">Contact Us</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Return and Warranty Policy</a>
+            <Link to="#">Contact Us</Link>
+            <Link to="#">Privacy Policy</Link>
+            <Link to="#">Return and Warranty Policy</Link>
           </div>
           <div className="footerMenu">
             <h3>Follow Us</h3>
             <div className="social">
-              <a href="#">
+              <Link to="#">
                 <i className="fab fa-facebook-f" />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="#">
                 <i className="fab fa-twitter" />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="#">
                 <i className="fab fa-instagram" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

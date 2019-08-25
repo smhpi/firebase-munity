@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./assets/css/slideshow.css";
 
 import slide2 from "./assets/images/slides/slide2.jpg";
@@ -26,17 +27,13 @@ class Home extends React.Component {
             <div className="numbertext">2 / 2</div>
             <img src={slide3} style={imgSlide} />
           </div>
-          <a className="prev" onClick="plusSlides(-1)">
-            &#10094;
-          </a>
-          <a className="next" onClick="plusSlides(1)">
-            &#10095;
-          </a>
+          <a className="prev">&#10094;</a>
+          <a className="next">&#10095;</a>
         </div>
         <br />
         <div>
-          <span className="dot" onClick="currentSlide(1)" />
-          <span className="dot" onClick="currentSlide(2)" />
+          <span className="dot" />
+          <span className="dot" />
         </div>
 
         <section id="articles">
@@ -71,23 +68,18 @@ class Home extends React.Component {
                 <b>Choosing the right laptop for work</b>
               </p>
               <p>
-                {" "}
                 A top-tier professional laptop must have robust security, strong
                 build quality, and a comfortable keyboard that delivers a smooth
                 typing experience. It also needs to be compact enough to carry
-                on business trips.
-                <p>
-                  <b>ThinkPad</b>
-                </p>
-                Our family of ThinkPad laptops is legendary in the industry.
-                Known for being "the world's #1 laptops for business," ThinkPad
-                laptops and workstations present an unmatched level of quality
-                and reliability. For instance, the impressive battery life comes
-                in handy when working on the road. The ThinkPad T Series (with
-                dual battery) can last up to 30.3 hours on a single charge,
-                which is unimaginable for most computer brands. Durable,
-                ultralight, and blazing fast, ThinkPad is the ideal laptop for
-                work.
+                on business trips. Our family of ThinkPad laptops is legendary
+                in the industry. Known for being "the world's #1 laptops for
+                business," ThinkPad laptops and workstations present an
+                unmatched level of quality and reliability. For instance, the
+                impressive battery life comes in handy when working on the road.
+                The ThinkPad T Series (with dual battery) can last up to 30.3
+                hours on a single charge, which is unimaginable for most
+                computer brands. Durable, ultralight, and blazing fast, ThinkPad
+                is the ideal laptop for work.
               </p>
               <p className="pbold">Click on the image for more information</p>
             </div>

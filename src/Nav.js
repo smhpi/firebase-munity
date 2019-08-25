@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Nav extends React.Component {
   render() {
@@ -12,19 +13,19 @@ class Nav extends React.Component {
           <nav id="mobile_menu" />
           <ul id="nav_menu" className="navbar">
             <li>
-              <a href="default.html">
+              <Link to="/">
                 <i className="fa fa-home" />
                 Home
-              </a>
+              </Link>
             </li>
             <li className="dropdown">
-              <a className="dropbtn" href="#">
+              <Link className="dropbtn" to="#">
                 Laptops
                 <i className="fas fa-caret-down" />
-              </a>
+              </Link>
               <ul className="dropdown-content">
                 <li>
-                  <a href="laptops/thinkpad.html">ThinkPad </a>
+                  <Link to="/products">ThinkPad </Link>
                 </li>
                 <li>
                   <a href="laptops/yoga.html">Yoga </a>
@@ -36,7 +37,7 @@ class Nav extends React.Component {
                   </a>
                   <ul className="dropright-content">
                     <li>
-                      <a href="laptops/idealpad.html#15">15.6"</a>
+                      <Link to="/products">15.6"</Link>
                     </li>
                     <li>
                       <a href="laptops/idealpad.html#14">14"</a>
