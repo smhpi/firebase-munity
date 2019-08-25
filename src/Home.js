@@ -4,7 +4,7 @@ import "./assets/css/slideshow.css";
 
 import slide2 from "./assets/images/slides/slide2.jpg";
 import slide3 from "./assets/images/slides/slide3.jpg";
-import lenovoYoga from "./assets/images/article/lenovoYoga.jpg";
+import lenovoYoga from "./assets/images/products/lenovoYoga.jpg";
 
 class Home extends React.Component {
   componentDidMount() {

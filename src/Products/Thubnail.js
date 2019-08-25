@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import "../assets/css/images.css";
 
@@ -6,6 +7,15 @@ class Thubnail extends Component {
   constructor(props) {
     super(props);
   }
+
+  componentWillMount() {
+    console.log("Component WILL MOUNT!");
+  }
+
+  componentWillUnmount() {
+    console.log("Component WILL UNMOUNT!");
+  }
+
   render() {
     let { product } = this.props;
 
@@ -14,7 +24,7 @@ class Thubnail extends Component {
         <img src={product.photo} alt="Avatar" className="image" />
         <div className="middle">
           <div className="text">
-            <a>View</a>
+            <Link to={`products/${product.id}`}>View</Link>
           </div>
           <h4>{product.title}</h4>
         </div>

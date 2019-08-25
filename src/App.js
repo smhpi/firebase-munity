@@ -1,9 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Nav from "./Nav";
 import Home from "./Home";
 import Products from "./Products/Products";
+import ProductWrapper from "./Products/ProductWrapper";
 import Footer from "./Footer";
 import "./assets/css/Main.css";
 
@@ -34,11 +35,19 @@ class App extends React.Component {
       <Router>
         <div>
           <Nav />
-          <Route exact path="/" component={Home} />
-          <Route
-            path="/products"
-            render={props => <Products products={this.state.products} />}
-          />
+          <Switch>
+            <Route
+              path="/products/:id"
+              render={props => (
+                <ProductWrapper products={this.state.products} {...props} />
+              )}
+            />
+            <Route
+              path="/products"
+              render={props => <Products products={this.state.products} />}
+            />
+            <Route path="/" component={Home} />
+          </Switch>
           <Footer />
         </div>
       </Router>

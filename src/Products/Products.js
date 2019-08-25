@@ -7,15 +7,16 @@ class Products extends Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     const products = this.props.products;
     return (
       <article className="collection">
         <div>
-          <h2>IdealPad 15.6"</h2>
+          <h2>Products</h2>
         </div>
         {products.map(item => (
-          <Thubnail product={item} />
+          <Thubnail product={item} key={item.id} />
         ))}
       </article>
     );
