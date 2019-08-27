@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import Product from "./Product";
 
 class ProductWrapper extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const product = this.props.products.find(p => {
       return p.id == this.props.match.params.id;

@@ -4,18 +4,6 @@ import { Link } from "react-router-dom";
 import "../assets/css/images.css";
 
 class Thubnail extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  componentWillMount() {
-    console.log("Component WILL MOUNT!");
-  }
-
-  componentWillUnmount() {
-    console.log("Component WILL UNMOUNT!");
-  }
-
   render() {
     let { product } = this.props;
 

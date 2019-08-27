@@ -28,37 +28,37 @@ class Nav extends React.Component {
                   <Link to="/products">ThinkPad </Link>
                 </li>
                 <li>
-                  <a href="laptops/yoga.html">Yoga </a>
+                  <Link to="laptops/yoga.html">Yoga </Link>
                 </li>
                 <li className="dropright">
-                  <a className="subdropbtn" href="#">
+                  <Link className="subdropbtn" to="#">
                     IdeaPad
                     <i className="fas fa-caret-right" />
-                  </a>
+                  </Link>
                   <ul className="dropright-content">
                     <li>
                       <Link to="/products">15.6"</Link>
                     </li>
                     <li>
-                      <a href="laptops/idealpad.html#14">14"</a>
+                      <Link to="laptops/idealpad.html#14">14"</Link>
                     </li>
                   </ul>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="desktops/thinkcentre.html">Desktops</a>
+              <Link to="desktops/thinkcentre.html">Desktops</Link>
             </li>
             <li>
-              <a href="pages/under-construction.html">Monitors</a>
+              <Link to="pages/under-construction.html">Monitors</Link>
             </li>
             <li>
-              <a
-                href="https://www.lenovo.com/ca/en/laptops/c/LAPTOPS"
+              <Link
+                to="https://www.lenovo.com/ca/en/laptops/c/LAPTOPS"
                 target="_blank"
               >
                 Lenovo.com
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

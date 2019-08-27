@@ -21,14 +21,12 @@ class Home extends React.Component {
         <div className="slideshow-container">
           <div className="mySlides fade">
             <div className="numbertext">1 / 2</div>
-            <img src={slide2} style={imgSlide} />
+            <img src={slide2} style={imgSlide} alt="slide" />
           </div>
           <div className="mySlides fade">
             <div className="numbertext">2 / 2</div>
-            <img src={slide3} style={imgSlide} />
+            <img src={slide3} style={imgSlide} alt="slide" />
           </div>
-          <a className="prev">&#10094;</a>
-          <a className="next">&#10095;</a>
         </div>
         <br />
         <div>
@@ -40,12 +38,7 @@ class Home extends React.Component {
           <div className="line" />
 
           <article id="article1">
-            <h2>
-              The Best Lenovo Business Laptops 2019
-              <a className="go_up" href="#" className="up">
-                &uparrow;
-              </a>
-            </h2>
+            <h2>The Best Lenovo Business Laptops 2019</h2>
 
             <div className="line" />
 
