@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const url = "./lib/products.json";
+    const url = "./lib/products-shopify.json";
     fetch(url)
       .then(function(response) {
         if (response.status >= 400) {

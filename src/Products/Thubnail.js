@@ -9,7 +9,7 @@ class Thubnail extends Component {
 
     return (
       <div key={product.id} className="thimble">
-        <img src={product.photo} alt="Avatar" className="image" />
+        <img src={product.images[0].src} alt="Avatar" className="image" />
         <div className="middle">
           <div className="text">
             <Link to={`products/${product.id}`}>View</Link>
