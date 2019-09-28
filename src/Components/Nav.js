@@ -60,7 +60,11 @@ class Nav extends React.Component {
                 Lenovo.com
               </Link>
             </li>
+            <li>
+                <Link to="/account">Account</Link>
+            </li>
           </ul>
+
         </div>
       </header>
     );

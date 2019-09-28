@@ -1,15 +1,15 @@
 import React from "react";
 
-import "./assets/css/slideshow.css";
+import "../assets/css/slideshow.css";
 
-import slide2 from "./assets/images/slides/slide2.jpg";
-import slide3 from "./assets/images/slides/slide3.jpg";
-import lenovoYoga from "./assets/images/products/lenovoYoga.jpg";
+import slide2 from "../assets/images/slides/slide2.jpg";
+import slide3 from "../assets/images/slides/slide3.jpg";
+import lenovoYoga from "../assets/images/products/lenovoYoga.jpg";
 
 class Home extends React.Component {
   componentDidMount() {
     const script = document.createElement("script");
-    script.src = "./assets/js/slider.js";
+    script.src = "../assets/js/slider.js";
     script.async = true;
     document.body.appendChild(script);
   }

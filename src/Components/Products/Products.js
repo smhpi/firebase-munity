@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-import Thubnail from "./Thubnail";
+import ProductCard from "./ProductCard";
 
 class Products extends Component {
   render() {
     const products = this.props.products;
+    console.log(products);
     return (
       <article className="collection">
         <div>
           <h2>Products</h2>
         </div>
         {products.map(item => (
-          <Thubnail product={item} key={item.id} />
+          <ProductCard product={item} key={item.id} />
         ))}
       </article>
     );

@@ -11,3 +11,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.omb_btn-facebook {background: #3b5998; color: white; margin: 10px}
+.omb_btn-google {background: #c32f10; color: white; margin: 10px}

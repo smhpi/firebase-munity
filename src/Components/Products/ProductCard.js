@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import "../assets/css/images.css";
+import "../../assets/css/images.css";
 
-class Thubnail extends Component {
+class ProductCard extends Component {
   render() {
     let { product } = this.props;
 
@@ -20,4 +20,4 @@ class Thubnail extends Component {
     );
   }
 }
-export default Thubnail;
+export default ProductCard;
