@@ -1,4 +1,5 @@
 import React from "react";
+import {withRouter } from "react-router-dom";
 
 import "../assets/css/slideshow.css";
 
@@ -83,4 +84,4 @@ class Home extends React.Component {
     );
   }
 }
-export default Home;
+export default withRouter(Home);

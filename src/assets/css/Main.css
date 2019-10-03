@@ -136,7 +136,7 @@ footer .line {
     display: block;
   }
 
-  .navbar {
+  .nav_bar {
     padding: 0;
     right: 0;
     background-color: #1428307a;
@@ -146,7 +146,7 @@ footer .line {
     position: relative;
   }
 
-  .navbar a {
+  .nav_bar a {
     float: left;
     font-size: 16px;
     color: white;
@@ -157,12 +157,12 @@ footer .line {
 
   /* The navigation styling: */
 
-  .navbar li {
+  .nav_bar li {
     display: inline;
   }
 
-  .navbar li a,
-  .navbar li a:visited {
+  .nav_bar li a,
+  .nav_bar li a:visited {
     color: white;
     display: block;
     font-size: 1.25em;
@@ -172,7 +172,7 @@ footer .line {
     margin: auto 0px;
   }
 
-  .navbar li a:hover {
+  .nav_bar li a:hover {
     text-decoration: none;
     background-color: #8800009f;
   }
@@ -190,7 +190,7 @@ footer .line {
     margin: 0;
   }
 
-  .navbar a:hover,
+  .nav_bar a:hover,
   .dropdown:hover .dropbtn {
     background-color: #8800009f;
   }
