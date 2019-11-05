@@ -1,13 +1,19 @@
 import React, { Component, Fragment } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import AppliedRoute from "./AppliedRoute";
+import Login from "./Components/Login";
+import Home from "./Components/Home";
+import Lost from "./Components/Lost";
+import Products from "./Components/Products/Products";
+import ProductDetails from "./Components/Products/ProductDetails";
 import withFirebaseAuth from "react-with-firebase-auth";
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "./firebaseConfig";
 
-import Routes from "./Routes";
+//import Routes from "./Routes";
 import Footer from "./Components/Footer";
-import "./assets/css/main.css";
+import "./assets/css/Main.css";
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseAppAuth = firebaseApp.auth();
@@ -138,62 +144,35 @@ class App extends Component {
                       <li>
                         <Link to="/account">Account /</Link>
                       </li>
-                      <Link to="/login" onClick={signOut}>
-                        LogOut
-                      </Link>
+                      <Link onClick={signOut}>LogOut</Link>
                     </Fragment>
                   ) : (
-                    <Fragment>
-                      <Link onClick={signInWithGoogle}>SignIn by Google</Link>
-                      <Link to="/login">Login</Link>
-                    </Fragment>
+                    <Link onClick={signInWithGoogle}>SignIn by Google</Link>
                   )}
-
-                  {/* {
-                  user ? (
-                          <Fragment>
-                              <li>
-                              <Link to="/account">Account /</Link>
-                              </li>
-                              <Link to="/login" onClick={signOut}>
-                                LogOut
-                              </Link>
-                          </Fragment>
-                      
-                      ) :
-                  (
-                      
-                          <Link to="/login" onClick={signInWithGoogle}>
-                            Login
-                          </Link>
-                  )
-                } */}
                 </span>
               </ul>
             </div>
           </header>
-          <Routes childProps={childProps} />
-          {/* {this.state.isAuthenticated ? (
+          {this.state.isAuthenticated ? (
             <Switch>
-              <Route path="/account" 
-                    render={(props) =>  <Login props={childProps} /> }
+              <Route
+                path="/account"
+                render={props => <Login props={childProps} />}
               />
               <Route exact path="/" component={Home} />
               <Route
                 exact
                 path="/products/:id"
-                render={(props) => {
-                  let cardPosition = props.location.pathname.replace('/products/','');
-                  const product = this.state.products.find((element) =>{
-                                    return element.id = cardPosition;
-                                  })
-                  return(
-                    <ProductDetails
-                        product={product}
-                    />
-                  )
-                }
-              }
+                render={props => {
+                  let cardPosition = props.location.pathname.replace(
+                    "/products/",
+                    ""
+                  );
+                  const product = this.state.products.find(element => {
+                    return (element.id = cardPosition);
+                  });
+                  return <ProductDetails product={product} />;
+                }}
               />
               <Route
                 path="/products"
@@ -203,10 +182,14 @@ class App extends Component {
             </Switch>
           ) : (
             <Switch>
-                <AppliedRoute exact path="/" component={Home} />
-                <AppliedRoute path="/login" component={Login} props={childProps}/>
+              <AppliedRoute exact path="/" component={Home} />
+              <AppliedRoute
+                path="/login"
+                component={Login}
+                props={childProps}
+              />
             </Switch>
-          )} */}
+          )}
           <Footer />
         </div>
       </Router>
